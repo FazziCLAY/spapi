@@ -1,4 +1,4 @@
-## SpApi - Pyhon библиотека для простого доступа к api серверов #СП
+## SpApi - Python библиотека для простого доступа к api серверов #СП
 
 Это переделка библиотеки https://github.com/ronanru/spapi только для Python
 
@@ -11,9 +11,9 @@
 ### Использование
 
 ```python
-from modules import spapi
+from modules import spapi # Импортируем
 
-api = spapi.SpApi("spm") # вместо spm пишете нужный сервер если он есть во вкладке 'Поддерживаемые сервера' тут - https://github.com/ronanru/spapi
+api = spapi.SpApi("spm") # Вместо spm пишете нужный сервер если он есть во вкладке 'Поддерживаемые сервера' тут - https://github.com/ronanru/spapi
 
 ```
 
@@ -62,4 +62,67 @@ elif a == "weather":
 
 else:
 	print("Таких данных не обнаружено.")
+```
+
+#### Output
+```
+>>> python3 main.py 
+ Введите что вы хотите получить -> weather
+ <GetServerWeather weather='CLEAR'>
+
+>>> python3 main.py 
+ Введите что вы хотите получить -> time
+ <GetServerTime timeOfDay='NIGHT', formated='19:33', ticks=12550>
+
+```
+
+
+### Список методов и описание
+```python
+
+getLastChatMessages(4)
+# Получить последние сообщения с сервера
+#
+# Аргументы:
+#  limit, первый позициональный аргумент. Влияет на максимальное кол-во возвращаемых сообщений
+#    Максимум - 50
+#
+# Пременные:
+#  messages - Список(list) из сообщений
+#
+
+
+getOnlinePlayers()
+# Получить онлайн сервера
+#
+# Переменные:
+#  players - Список(list) из словарей с ключами nick & uuid
+#  count   - Число(int) показывает текущий онлайн
+#  max     - Число(int) показывает максимальный онлайн
+#
+#
+
+
+getServerTime()
+# Получить текущее время на сервере
+#
+# Переменные:
+#  timeOfDay - Строка(str)  'DAY' или 'NIGHT'
+#  ticks     - Число(int)   Время в тиках
+#  formated  - Строка(str)  Время в 24 часовом форма
+#
+#
+#
+#
+#
+
+
+getServerWeather()
+# Получить текущую погоду на сервере
+#
+# Переменные:
+#  weather - Строка(str)  'CLEAR', 'RAIN' или 'THUNDER'
+#
+
+
 ```
