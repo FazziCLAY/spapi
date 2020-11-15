@@ -26,10 +26,10 @@ data = api.getLastChatMessages(5).messages
 
 # api - Обьект api который мы создали выше во вкладке "Использование"
 
-# getLastChatMessages(5) - Метод обьекта api. Список методов будет ниже.
+# getLastChatMessages(5) - Метод обьекта api. (Список методов будет ниже.)
 # Значение в скобках это аргумент этого метода, тут он означает лимит сообщений
 
-# message - Это переменная обьекта getLastChatMessages(5)
+# messages - Это переменная обьекта getLastChatMessages(5)
 # тоесть мы хотим от этого метода список сообщений.
 # Без него это выглядело бы примерно вот так - <GetLastChatMessages messages='[]'>
 
