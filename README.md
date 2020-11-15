@@ -19,7 +19,7 @@ api = spapi.SpApi("spm") # вместо spm пишете нужный серве
 
 
 #### Синтаксис и инструкции
-```
+```python
 data = api.getLastChatMessages(5).messages 
 
 # data - Это переменная, в неё мы записываем значение, которое вернул метод
